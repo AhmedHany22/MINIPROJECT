@@ -1,0 +1,14 @@
+{
+  "name": "minitypescriptproject",
+  "version": "1.0.0",
+  "description": "Typescript Study",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server"
+  },
+  "author": "Ahmed Hany",
+  "license": "ISC",
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
