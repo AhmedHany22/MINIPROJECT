@@ -12,7 +12,9 @@ const saveTodos = () => {
 
 // Type Non_Null Assertion : the ! mark assure it'snot null
 const btn = document.getElementById("btn")!;
-btn.addEventListener("click", () => alert(input.value));
+btn.addEventListener("click", () =>
+  console.log('New Todo "' + input.value + '" added')
+);
 // const btn = document.getElementById("btn");
 // btn?.addEventListener("click", () => console.log("Hello TS"));
 
@@ -35,7 +37,7 @@ form.addEventListener("submit", handleSubmit);
 // 2: the (e) is auto defined by the eventListener
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  const newTodo: Todo = { title: input.value, status: true };
+  const newTodo: Todo = { title: input.value, status: false };
   todoArr.push(newTodo);
   ctreateNewTodo(newTodo);
 
