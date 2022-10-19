@@ -109,6 +109,7 @@ const weekday = [
   "Saturday",
 ];
 
+<<<<<<< HEAD
 const day = document.querySelector(".day")!;
 const date = document.querySelector(".date")!;
 const n = new Date();
@@ -118,3 +119,17 @@ const dstring = n.getDay();
 const dnum = n.getDate();
 day.textContent = weekday[dstring];
 date.textContent = dnum + " " + monthNames[m - 1] + " " + y;
+=======
+const day = document.getElementById("day")!;
+const date = document.getElementById("date")!;
+
+const n = new Date();
+const y = n.getFullYear();
+const m = n.getMonth() + 1;
+const d = n.getDay();
+const dnumber = n.getDate();
+day.textContent = weekday[d];
+const p = document.createElement("p");
+p.className = "text-gray fst-italic mb-0";
+date.textContent = dnumber + " " + monthNames[m - 1] + " " + y;
+>>>>>>> 46ce8135a707a1865ffcd7364cceb250d9d5eb2b
