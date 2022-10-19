@@ -109,11 +109,12 @@ const weekday = [
   "Saturday",
 ];
 
-const day = document.querySelector(".day");
-const date = document.querySelector(".date");
+const day = document.querySelector(".day")!;
+const date = document.querySelector(".date")!;
 const n = new Date();
 const y = n.getFullYear();
 const m = n.getMonth() + 1;
-const d = n.getDay();
-day?.append(weekday[d]);
-date?.append(d + " " + monthNames[m] + " " + y);
+const dstring = n.getDay();
+const dnum = n.getDate();
+day.textContent = weekday[dstring];
+date.textContent = dnum + " " + monthNames[m - 1] + " " + y;
